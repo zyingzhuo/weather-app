@@ -8,6 +8,7 @@ import ProtectedRoute from './components/auth/ProtectedRoute';
 import UsersList from './components/UsersList';
 import User from './components/User';
 import { authenticate } from './store/session';
+import WeatherPage from './components/WeatherPage';
 
 function App() {
   const [loaded, setLoaded] = useState(false);
@@ -28,6 +29,9 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Switch>
+      <Route path='/weather' exact={true}>
+          <WeatherPage/>
+        </Route>
         <Route path='/login' exact={true}>
           <LoginForm />
         </Route>
