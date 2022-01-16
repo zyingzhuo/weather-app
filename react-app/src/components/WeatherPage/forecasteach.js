@@ -16,15 +16,17 @@ console.log(singleforecast)
 
     return (
         <>
-        <div style={{marginLeft:'30%'}}>
+        <div style={{ padding:'30px', borderTop:'1px solid lightgray', borderBottom:'1px solid lightgray'}}>
+            <div>
                 <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
                     <h2>{forecastday}</h2>
                     <img src={forecastpic} style={{}}></img>
                 </div>
                 <div style={{display:'flex'}}>
                     <h1>{forecastmin}{'\u00b0'}</h1>
-                    <h1 style={{marginLeft:'53px'}}>{forecastmax}{'\u00b0'}</h1>
+                    <h1 style={{marginLeft:'50px'}}>{forecastmax}{'\u00b0'}</h1>
                 </div>
+            </div>
         </div>
         </>
     )

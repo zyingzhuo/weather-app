@@ -78,28 +78,25 @@ useEffect(()=>{
 
 return (
     <>
-     <div style={{display:'flex'}}>
-     <div>
-       <h2>{day}</h2>
-       <img src="https://openweathermap.org/img/wn/01d@2x.png"/>
-       <div style={{display:'flex'}}>
-        <h1>{max}{'\u00b0'}</h1>
-        <h1 style={{marginLeft:'4%'}}>{min}{'\u00b0'}</h1>
+     <div style={{display:'flex', }}>
+        <div style={{ backgroundColor:'lightgray', padding:'30px'}}>
+                <div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
+                    <h2>{day}</h2>
+                    <img src="https://openweathermap.org/img/wn/01d@2x.png"/>
+                </div>
+                <div style={{display:'flex'}}>
+                    <h1>{max}{'\u00b0'}</h1>
+                    <h1 style={{marginLeft:'50px'}}>{min}{'\u00b0'}</h1>
+                </div>
         </div>
-        </div>
-        <div style={{display:'flex'}}>
+        <div style={{display:'flex', borderRight:'1px solid lightgray'}}>
         {filtered?.map((singleforecast,i)=>(
-            <>
-            {/* <h1>min temp {singleforecast.main.temp_min}</h1>
-            <h1>max temp {singleforecast.main.temp_max}</h1>
-            <h1>{singleforecast.dt}</h1>
-            <h1>{singleforecast.weather[0].icon}</h1>
-            <img src={images[i]}></img> */}
-            <Each singleforecast={singleforecast}/>
-            </>
+                    <>
+                    <Each singleforecast={singleforecast}/>
+                    </>
         )
             
-             
+            
         )}
         </div>
     </div>
